@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+#Script that displays numbers from 1 to 100
+
+i=1
+
+while [ $i -le 100 ]
+
+do
+
+	div3=$((i % 3))
+	div5=$((i % 5))
+	div15=$((i % 15))
+
+	if [ $div15 -eq 0 ]
+	then
+		echo "FizzBuzz"
+
+	elif [ $div3 -eq 0 ]
+	then
+		echo "Fizz"
+
+	elif [ $div5 -eq 0 ]
+	then
+		echo "Buzz"
+
+	else
+		echo "$i"
+
+	fi
+	((++i))
+
+done
