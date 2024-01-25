@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#Script to list all files in current dir
+
+for file in *;
+
+do
+
+    if [[ $file == .* ]];
+    then
+        continue
+    fi
+
+    name=${file#*-}
+    echo "$name"
+
+done
