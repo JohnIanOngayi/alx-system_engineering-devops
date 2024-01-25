@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#Script that displays time for 12 hours and 50 minutes
+
+hour=0
+minute=0
+while [ $hour -lt 13 ]
+do
+	while [ $minute -lt 60 ]
+	do
+		if [ $minute -eq 0 ]
+		then
+			echo "Hour: ${hour}"
+		else
+			echo "$minute"
+		fi
+		((++minute))
+	done
+	((++hour))
+	minute=0
+done
