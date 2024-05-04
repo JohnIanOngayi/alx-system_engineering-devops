@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Installs and configures an HAProxy load balancer
+
+sudo apt-get -y update
+apt-get -y install haproxy
+config="
+frontend john-ian
+        bind *:80
+        default_backend john-ian-backend
+
+backend john-ian-backend
+        balance roundrobin
+        server 516538-web-01 54.208.102.103:80 check
+        server 516538-web-02 100.25.110.34:80 check
+"
+
+echo "$config" | sudo tee -a /etc/haproxy/haproxy.cfg
+sudo systemctl enable haproxy
+sudo service haproxy restart
