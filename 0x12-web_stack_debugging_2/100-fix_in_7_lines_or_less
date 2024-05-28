@@ -2,6 +2,6 @@
 #kills apache2 service and runs nginx master process with user nginx on port 8080
 pkill apache2
 sudo sed -i 's/#user www-data/user nginx/' /etc/nginx/nginx.conf
-sudo sed -i 's/listen 80/listen 8080/' /etc/nginx/sites-enabled/default
+sudo sed -i 's/80/8080/' /etc/nginx/sites-enabled/default
 chmod 644 /etc/nginx/nginx.conf
 sudo -u nginx service nginx restart
