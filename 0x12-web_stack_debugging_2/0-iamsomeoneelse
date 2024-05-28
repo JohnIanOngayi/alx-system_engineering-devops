@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Script that prints username for arg passed if arg is valid user
+
+if [ "$#" -ne 1 ]
+then
+        echo 'Usage: ./0-iamsomeoneelse username'
+elif [ ! "$(getent passwd "$1" | awk -F ":" '{print $1}')" ]
+then
+        echo 'Unknown User'
+else
+        sudo -u "$1" whoami
+fi
