@@ -5,8 +5,6 @@ Module that interacts with Reddit API to get no. of subscribers of a subreddit
 
 import requests
 
-headers = {'User-Agent': 'My User Agent 1.0'}
-
 
 def number_of_subscribers(subreddit):
     """
