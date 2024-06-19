@@ -5,6 +5,8 @@ Module that queries Reddit API to print first 10 hot posts for a given sub
 
 import requests
 
+headers = {'User-Agent': 'My User Agent 1.0'}
+
 
 def top_ten(subreddit):
     """
