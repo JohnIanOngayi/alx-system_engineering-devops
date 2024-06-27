@@ -1,0 +1,3 @@
+# 0x1A-application_server
+
+This project repository is a part of the Holberton School curriculum. Imkdir -p "0x1A-application_server" && cd "0x1A-application_server" && touch README.md  && touch README.md 2-app_server-nginx_config 3-app_server-nginx_config 4-app_server-nginx_config 5-app_server-nginx_config gunicorn.service 4-reload_gunicorn_no_downtime  && echo "0x1A-application_server" > README.md && find . ! -name "*.*" ! -name "README.md" -type f -exec sh -c 'echo "#!/usr/bin/env bash" > "{}" && chmod u+x "{}"' \;t contains the files used in the Holberton intranet project "0x1A. Application server". The project is aimed at setting up an application server using Gunicorn and Nginx.
